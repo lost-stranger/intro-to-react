@@ -1,0 +1,29 @@
+
+<!-- saved from url=(0048)file:///E:/BLOC/bloc/react-counter/greeting.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>My First React app</title>
+</head>
+    
+<body>
+<div id="app"></div>
+
+    <script src="./greeting_files/react.development.js.download"></script>
+    <script src="./greeting_files/react-dom.development.js.download"></script>
+    <script src="./greeting_files/browser.min.js.download"></script>
+
+    <script type="text/babel">
+       class Greeting extends React.Component {
+         render() {
+           return (
+             <div>
+               <h1>Hello World!</h1>
+             </div>
+           );
+         }
+       }
+ 
+       ReactDOM.render(
+         <Greeting />, document.getElementById('app')
+       );
+    </script>
+</body></html>
