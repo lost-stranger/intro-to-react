@@ -5,7 +5,7 @@
 </head>
     
 <body>
-<div id="app"></div>
+<div id="app"><div><h1>Hello World!</h1></div></div>
 
     <script src="./greeting_files/react.development.js.download"></script>
     <script src="./greeting_files/react-dom.development.js.download"></script>
@@ -13,17 +13,21 @@
 
     <script type="text/babel">
        class Greeting extends React.Component {
-         render() {
-           return (
-             <div>
-               <h1>Hello World!</h1>
-             </div>
-           );
-         }
-       }
- 
-       ReactDOM.render(
-         <Greeting />, document.getElementById('app')
-       );
+        render() {
+          return (
+            <div>
+                <h1>Hello World!</h1>
+               <h1>Hello {this.props.name}!</h1>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+          <Greeting />, document.getElementById('app')
+         <Greeting name="Bloc Student"/>, document.getElementById('app')
+      );
+
     </script>
+  
 </body></html>
