@@ -1,0 +1,49 @@
+
+<!-- saved from url=(0050)file:///E:/BLOC/bloc/react-counter/submission.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"> 
+  <title>Submission</title>
+</head>
+
+<body>  
+   
+<div id="app"><div><h1> What is the point of this?</h1><img src="./Submission_files/rtg0q.jpg" alt="shrugging"><h3> Time spent on this (weeks): 1 </h3></div></div>
+  
+    <script src="file:///E:/BLOC/bloc/react-counter/submission_files/react.development.js.download"></script>
+    <script src="file:///E:/BLOC/bloc/react-counter/submission_files/react-dom.development.js.download"></script>
+    <script src="file:///E:/BLOC/bloc/react-counter/submission_files/browser.min.js.download"></script>
+  
+    <script type="text/babel">
+       class Joke extends React.Component {
+        constructor(props){
+           super(props);
+           this.state = {
+             number: 2
+           }
+         }
+         render() {
+           return (
+             <div>
+                <h1> {this.props.question}</h1>
+                <img src={this.props.image} alt="shrugging"/>
+                <h3> Time spent on this (weeks): {this.state.number} </h3>
+             </div>
+           );
+         }
+       }
+ const info = {
+        question: "What is the point of this?",
+        image: 'https://i.imgflip.com/rtg0q.jpg',
+      }
+
+       ReactDOM.render(
+         <Joke 
+         question = {info.question}
+         image = {info.image}
+         />, document.getElementById('app')
+       );
+
+  </script>
+
+
+
+</body></html>
