@@ -10,8 +10,8 @@ import ToDo from './Components/ToDo.js';
     { description: 'Walk the cat', isCompleted: true },
     { description: 'Throw the dishes away', isCompleted: false },
     { description: 'Buy new dishes', isCompleted: false }
-    ],
-    newTodoDescription: ''
+  ],
+newTodoDescription: ''
   };
 }
 
@@ -41,7 +41,7 @@ toggleComplete(index) {
              <ToDo key={ index } description={ todo.description } isCompleted={ todo.isCompleted } toggleComplete={ () => this.toggleComplete(index) } />
         )}
         </ul>
-          <form onSubmit={ (e) => this.handleSubmit(e) }>
+        <form onSubmit={ (e) => this.handleSubmit(e) }>
           <input type="text" value={ this.state.newTodoDescription } onChange={ (e) => this.handleChange(e) } />
           <input type="submit" />
         </form>
